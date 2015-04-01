@@ -1,0 +1,11 @@
+#!/bin/sh
+
+@java@ -cp "@out@/defbot.jar" \
+        -Djava.security.policy="@out@/security.policy" \
+        -Xms256M \
+        -Xmx256M \
+        -XX:+UseConcMarkSweepGC \
+        -XX:+UseParNewGC \
+        -XX:+CMSParallelRemarkEnabled \
+        -XX:+CMSClassUnloadingEnabled \
+        defbot.cli $@
