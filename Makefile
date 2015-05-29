@@ -14,3 +14,7 @@ install: $(uberjar)
 	cp -rv bin $(out)/bin
 	cp security.policy $(out)
 .PHONY: install
+
+docker:
+	docker build -t ragge/defbot .
+.PHONAY: docker
