@@ -7,7 +7,7 @@ A [slack](http://www.slack.com) bot for clojure.
 This project provides packaging for [nix](http://nixos.org/nix), so
 that should cover 0.00001% of all users.
 
-### If you're using nix
+### nix
 
 ```
 $ nix-env -f . -i defbot
@@ -19,7 +19,20 @@ usage: defbot [TOKEN]
 Start a defbot using slack API token TOKEN.
 ```
 
-### If you're not using nix
+### docker
+
+```
+$ docker run ragge/defbot
+...
+
+$ defbot
+usage: defbot [TOKEN]
+
+Start a defbot using slack API token TOKEN.
+```
+
+
+### Plain jar
 
 You can build an uberjar and run it as follows:
 
