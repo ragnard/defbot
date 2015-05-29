@@ -8,4 +8,4 @@ COPY . /opt/defbot
 
 RUN lein uberjar
 
-ENTRYPOINT ["java", "-jar", "target/defbot.jar"]
+ENTRYPOINT ["java", "-Djava.security.policy=security.policy", "-jar", "target/defbot.jar"]
