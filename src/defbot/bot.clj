@@ -83,7 +83,7 @@
 
 (defmethod handle-event :message
   [{:keys [channel text]} state send!]
-  (when (.startsWith text ",")
+  (when (and text (.startsWith text ","))
     (try
       (let [form (clojail/safe-read (unescape-html-entities text))
             _ (log/debugf "read form for eval: '%s'" (pr-str form))
